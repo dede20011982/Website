@@ -48,4 +48,22 @@
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
-})(jQuery); // End of use strict
+
+    })
+ (jQuery); // End of use strict
+        
+    //Carousel
+    $(function() {
+        $(".carousel").carousel( { interval: 5000 } );
+        $("#carouselButton").click(function(){
+            if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                $(".carousel").carousel("pause");
+                $("#carouselButton").children("i").removeClass("fa-pause");
+                $("#carouselButton").children("i").addClass("fa-play");
+            } else {
+                $(".carousel").carousel("cycle");
+                $("#carouselButton").children("i").removeClass("fa-play");
+                $("#carouselButton").children("i").addClass("fa-pause"); 
+            }
+        });
+    });

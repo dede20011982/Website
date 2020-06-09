@@ -1,7 +1,7 @@
     (function ($) {
     "use strict"; // Start of use strict
 
-    // Smooth scrolling using jQuery easing
+    // Smooth scrolling using jQuery easing (index.html page only)
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
             location.pathname.replace(/^\//, "") ==
@@ -25,12 +25,12 @@
         }
     });
 
-    // Closes responsive menu when a scroll trigger link is clicked
+    // Closes responsive menu when a scroll trigger link is clicked (index.html page only)
     $(".js-scroll-trigger").click(function () {
         $(".navbar-collapse").collapse("hide");
     });
 
-    // Activate scrollspy to add active class to navbar items on scroll
+    // Activate scrollspy to add active class to navbar items on scroll (index.html page only)
     $("body").scrollspy({
         target: "#mainNav",
         offset: 100,
@@ -49,10 +49,9 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 
-    })
- (jQuery); // End of use strict
+    })(jQuery);
         
-    //Carousel
+    //Carousel (Gallery.html page only)
     $(function() {
         $(".carousel").carousel( { interval: 5000 } );
         $("#carouselButton").click(function(){

@@ -25,18 +25,18 @@
         }
     });
 
-    // Closes responsive menu when a scroll trigger link is clicked (index.html page only)
+    // Closes responsive menu when a scroll trigger link is clicked (index.html, donation.html, and gallery.html)
     $(".js-scroll-trigger").click(function () {
         $(".navbar-collapse").collapse("hide");
     });
 
-    // Activate scrollspy to add active class to navbar items on scroll (index.html page only)
+    // Activate scrollspy to add active class to navbar items on scroll (index.html, donation.html, and gallery.html)
     $("body").scrollspy({
         target: "#mainNav",
         offset: 100,
     });
 
-    // Collapse Navbar
+    // Collapse Navbar (index.html, donation.html, and gallery.html)
     var navbarCollapse = function () {
         if ($("#mainNav").offset().top > 100) {
             $("#mainNav").addClass("navbar-shrink");
@@ -44,12 +44,13 @@
             $("#mainNav").removeClass("navbar-shrink");
         }
     };
-    // Collapse now if page is not at top
+    // Collapse now if page is not at top (index.html, donation.html, and gallery.html)
     navbarCollapse();
-    // Collapse the navbar when page is scrolled
+    
+    // Collapse the navbar when page is scrolled (index.html, donation.html, and gallery.html)
     $(window).scroll(navbarCollapse);
 
-    })(jQuery);
+    })(jQuery); //End of use strict (allows Nav bar to keep white backround in index.html, donation.html, and gallery.html pages) 
         
     //Carousel (Gallery.html page only)
     $(function() {
